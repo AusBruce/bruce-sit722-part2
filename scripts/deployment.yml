@@ -1,6 +1,3 @@
-# Write Kubernetes Deployment Script
-
-# Write Kubernetes Deployment Script
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -19,11 +16,11 @@ spec:
     spec:
       containers:
       - name: book-catalog
-        image: my-fastapi-book-app:latest
+        image: book_catalog_image:2
         imagePullPolicy: IfNotPresent
         env:
         - name: DATABASE_URL
-          value: 
+          value: "postgresql://bruce:jgDHOlunwkOlmivCyqpZfAsJ0GpSgF3V@dpg-cr957ejtq21c73a40d8g-a.singapore-postgres.render.com/brucedemo"
         resources:
           limits:
             memory: "500Mi"
